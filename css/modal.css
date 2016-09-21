@@ -1,0 +1,123 @@
+.modal {
+  height: 400px;
+  max-width: 650px;
+  width: 100%;
+  margin: auto;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+  transition: .4s, box-shadow .3s .4s;
+}
+.modal.hidden {
+  box-shadow: none;
+  transition: .4s, box-shadow 0s;
+  opacity: 0;
+  visibility: hidden;
+}
+.modal.hidden .form {
+  top: 100%;
+}
+.modal.hidden .invite {
+  top: -100%;
+}
+.modal.hidden .invite .close {
+  height: 0;
+  width: 0;
+  top: 0;
+  right: 0;
+}
+
+.modal-background {
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.8;
+}
+
+.form, .invite {
+  background: #344055;
+  width: 50%;
+  height: 100%;
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal input {
+  background: rgba(255, 255, 255, 0.15);
+  width: 100%;
+  padding: 8px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  color: #FFF;
+  font-size: 20px;
+}
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 500px #7a7a7a inset;
+  -webkit-text-fill-color: #FFF;
+}
+
+.modal label {
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+.modal h3, .modal h5 {
+	color: #fff;
+}
+
+.modal h5 {
+	line-height: 160%;
+}
+
+.modal .promo-details {
+	position: absolute;
+	color: #fff;
+	font-size: 0.8em;
+	bottom: 20px;
+}
+
+.invite {
+  background: #3861F4;
+  left: 50%;
+}
+
+.modal .close {
+  background: #474747;
+  height: 30px;
+  width: 30px;
+  border: 3px solid #FFF;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  cursor: pointer;
+  transition: .4s .3s;
+}
+.close:before, .close:after {
+  content: '';
+  background: #FFF;
+  height: 80%;
+  width: 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+.close:after {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.subscribe.button {
+	background-color: #3861F4;
+}
