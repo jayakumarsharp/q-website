@@ -240,6 +240,11 @@ textarea {
     width: 100%;
     max-width: 1280px;
     top: 0;
+    transition: top 0.3s ease-in;
+}
+
+.nav-up {
+  top: -100px;
 }
 
 .nav-bar .logo {
@@ -281,6 +286,12 @@ textarea {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+@media (max-width: 38em) {
+  .splash {
+    height: 400px;
+  }
 }
 
 .splash .hero {
