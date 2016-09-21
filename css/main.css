@@ -246,10 +246,19 @@ textarea {
     width: 200px;
 }
 
+@media (max-width: 49em) {
+    .nav-bar {
+        font-size: 0.7rem;
+    }
+
+    .pure-menu-list {
+      margin-top: 5px;
+    }
+}
+
 @media (max-width: 38em) {
     .nav-bar {
         text-align: center;
-        font-size: 0.8rem;
     }
 
     .nav-bar .actions {
