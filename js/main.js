@@ -25,11 +25,11 @@ var lastScrollTop = 0;
 var delta = 5;
 var navbarHeight = $('.nav-bar').outerHeight();
 
-// on scroll, let the interval function know the user has scrolled
+
 $(window).scroll(function(event){
   didScroll = true;
 });
-// run hasScrolled() and reset didScroll status
+
 setInterval(function() {
   if (didScroll) {
     hasScrolled();
@@ -42,9 +42,7 @@ function hasScrolled() {
     // Make sure they scroll more than delta
     if(Math.abs(lastScrollTop - st) <= delta)
         return;
-    
-    // If they scrolled down and are past the navbar, add class .nav-up.
-    // This is necessary so you never see what is "behind" the navbar.
+
     if (st > lastScrollTop && st > navbarHeight){
         // Scroll Down
         $('.nav-bar').removeClass('nav-down').addClass('nav-up');
